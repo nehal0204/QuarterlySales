@@ -1,0 +1,15 @@
+﻿@model TopQuartersByEmployeeViewModel
+
+<h6><b>@Model.NumberOfQuartersToShow.ToString() Top Quarters By Employee</b></h6>
+    <ol>
+        @foreach (var year in Model.TopQuarters)
+        {
+            <li>@year.Year  Q-@year.Quarter:  <b>@year.Amount?.ToString("c")</b> <br>
+               <div style="border-radius:70px" class="btn btn-primary"><b>@year.Employee.Fullname</b></div> 
+              
+                  </li>
+
+        }
+
+
+    </ol>
